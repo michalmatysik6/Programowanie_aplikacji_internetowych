@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<form action="<?php print(_APP_URL);?>/app/calc.php" method="post">
+<form action="<?php print(_APP_URL);?>/Kalkulator/app/calc.php" method="post">
     <label for="id_kwota">Kwota kredytu: </label>
     <input id="id_kwota" type="text" name="kwota" value="<?php print($kwota ?? ''); ?>" /><br />
     <label for="id_lata">Liczba lat: </label>
