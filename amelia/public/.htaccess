@@ -1,0 +1,10 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /Programowanie_aplikacji_internetowych-main/amelia/public/
+
+# Przekierowanie z / na index.php?action=glowna
+RewriteRule ^$ index.php?action=glowna [L,QSA]
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteRule ^.*$ index.php [QSA,L]
