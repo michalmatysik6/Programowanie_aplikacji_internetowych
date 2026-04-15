@@ -1,0 +1,11 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+$user = isset($_SESSION['user']) ? unserialize($_SESSION['user']) : null;
+
+if (!(isset($user) && isset($user->login) && isset($user->role))) {
+    header("Location: index.php?action=login");
+    exit();
+}
